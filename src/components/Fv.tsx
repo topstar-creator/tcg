@@ -57,7 +57,7 @@ export function Fv({ fv }: FvProps) {
           </p>
         </div>
 
-        <div className="mt-30 mb-20 flex w-full justify-center gap-30 max-md:mt-25 max-md:mb-25 max-md:gap-16 max-[450px]:flex-col max-[450px]:gap-10">
+        <div className="mt-30 mb-20 flex w-full justify-center gap-30 max-md:mt-20 max-md:mb-20 max-md:gap-16 max-[450px]:flex-col max-[450px]:gap-10">
           {fv.highlights.map((item) => (
             <div
               key={item.label}
@@ -71,9 +71,9 @@ export function Fv({ fv }: FvProps) {
           ))}
         </div>
 
-        <div className="relative mb-40 flex w-full items-center justify-center max-md:mb-40 max-[450px]:mb-32">
+        <div className="relative mb-40 flex w-full items-center justify-center max-md:mb-40 max-[450px]:mb-25">
           <div className="relative flex items-end justify-center">
-            <div className="relative z-10 w-[11rem] aspect-[22/30.8] max-md:w-[10rem] max-[450px]:w-[12rem]">
+            <div className="relative z-10 w-[11rem] aspect-[22/30.8] max-md:w-[10rem]">
               <Image
                 src={`${fv.cards.left}?v=${fv.cardAssetVersion}`}
                 alt=""
@@ -83,7 +83,7 @@ export function Fv({ fv }: FvProps) {
                 className="-rotate-6 rounded-[0.8rem] object-contain shadow-[0_0_3rem_0_#D4AF3780] max-md:-rotate-4 max-[450px]:-rotate-3"
               />
             </div>
-            <div className="relative z-20 w-[17rem] aspect-[30/42] max-md:w-[16rem] max-[450px]:w-[17rem]">
+            <div className="relative z-20 w-[17rem] aspect-[30/42] max-md:w-[16rem]">
               <Image
                 src={`${fv.cards.center}?v=${fv.cardAssetVersion}`}
                 alt="PSA10 高価買取対象カード"
@@ -94,7 +94,7 @@ export function Fv({ fv }: FvProps) {
                 priority
               />
             </div>
-            <div className="relative z-10 w-[11rem] aspect-[22/30.8] max-md:w-[10rem] max-[450px]:w-[12rem]">
+            <div className="relative z-10 w-[11rem] aspect-[22/30.8] max-md:w-[10rem]">
               <Image
                 src={`${fv.cards.right}?v=${fv.cardAssetVersion}`}
                 alt=""
