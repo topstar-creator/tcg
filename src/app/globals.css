@@ -338,8 +338,8 @@ body {
   display: inline-grid;
   font-family: var(--font-noto-serif-jp), ui-serif, serif;
   font-weight: 900;
-  font-size: 9rem;
-  line-height: 1;
+  font-size: 7rem;
+  line-height: 1.2;
   letter-spacing: 0.07em;
   text-align: center;
   -webkit-font-smoothing: antialiased;
@@ -380,7 +380,7 @@ body {
 
 @media (max-width: 768px) {
   .fv-title-accent {
-    font-size: 9rem;
+    font-size: 8rem;
     filter: drop-shadow(0.4rem 0.3rem 0.2rem #ffffff) drop-shadow(0 0.4rem 1rem #D4AF3782);
     line-height: 1.4;
   }
