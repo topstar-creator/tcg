@@ -66,7 +66,7 @@ function ReasonTitle({ title }: { title: string }) {
 
 function ReasonCard({ reason }: { reason: ReasonItem }) {
   return (
-    <div className="flex flex-col gap-14 px-20 py-30 border border-[#B3905466] bg-[#141414] max-md:gap-12 max-md:px-16 max-md:py-24 max-[450px]:gap-10 max-[450px]:px-15 max-[450px]:py-20">
+    <div className="flex flex-col gap-14 px-20 py-25 border border-[#B3905466] bg-[#141414] max-md:gap-12 max-md:px-16 max-md:py-24 max-[450px]:gap-10 max-[450px]:px-15 max-[450px]:py-20">
 
       <div className="flex items-start gap-15 max-md:gap-12 max-[450px]:gap-10">
         <div
@@ -81,7 +81,7 @@ function ReasonCard({ reason }: { reason: ReasonItem }) {
             Reason.{reason.number}
           </p>
 
-          <h3 className="font-serif text-26 font-bold leading-[1.3] text-white max-md:text-22 max-[450px]:text-[1.9rem]">
+          <h3 className="font-serif text-22 font-bold leading-[1.3] text-white max-md:text-22 max-[450px]:text-[1.9rem]">
             <ReasonTitle title={reason.title} />
           </h3>
 
@@ -89,7 +89,7 @@ function ReasonCard({ reason }: { reason: ReasonItem }) {
         
       </div>
 
-      <p className="font-serif text-20 pl-40 pr-30 text-[#9CA3AF] max-md:pl-25 max-md:pr-15 max-md:text-18 max-[450px]:text-16">
+      <p className="font-serif text-16 pl-30 pr-10 text-[#9CA3AF] max-md:pl-25 max-md:pr-15 max-md:text-18 max-[450px]:text-16">
           {reason.description}
       </p>
     </div>
@@ -103,23 +103,23 @@ export function Reason({ reasons }: ReasonProps) {
       className="relative overflow-hidden bg-background py-80 max-md:py-60"
       aria-labelledby="reasons-heading"
     >
-      <div className="relative flex flex-col items-center gap-50 px-150 max-md:gap-40 max-md:px-25 max-[450px]:gap-32 max-[450px]:px-15">
+      <div className="relative flex flex-col items-center gap-50 px-180 max-md:gap-40 max-md:px-25 max-[450px]:gap-32 max-[450px]:px-15">
         <h2
           id="reasons-heading"
-          className="relative z-10 font-serif text-[6rem] font-bold leading-[1] text-center text-white max-md:text-[4rem] max-md:leading-[1.2] max-[450px]:text-[2.6rem]"
+          className="relative z-10 font-serif text-[3.6rem] font-bold leading-[1] text-center text-white max-md:text-[3.3rem] max-md:leading-[1.2] max-[450px]:text-[2.6rem]"
         >
           TCG ROYAL郵送買取が選ばれる<br />
-          <span className="text-[8rem] leading-[1] text-gold title-gradient max-md:text-[5rem] max-[450px]:text-[3.8rem]">5</span>つの理由
+          <span className="text-[6rem] leading-[1] text-gold title-gradient max-md:text-[4.2rem] max-[450px]:text-[3.6rem]">5</span>つの理由
         </h2>
 
-        <div className="relative z-10 grid w-full grid-cols-2 gap-y-14 gap-x-30 max-md:grid-cols-1 max-md:gap-y-12 max-[450px]:gap-y-10">
+        <div className="relative z-10 grid w-full grid-cols-2 gap-y-14 gap-x-20 max-md:grid-cols-1 max-md:gap-y-12 max-[450px]:gap-y-10">
           {reasons.map((reason) => (
             <ReasonCard key={reason.number} reason={reason} />
           ))}
         </div>
 
         <div
-          className="pointer-events-none absolute top-[-8rem] h-[37rem] w-[25rem] left-[61%] -translate-x-1/2 max-md:top-[-4rem] max-md:h-[20rem] max-md:w-[14rem] max-md:left-auto max-md:right-0 max-md:translate-x-0 max-[450px]:hidden"
+          className="pointer-events-none absolute top-[-3rem] h-[24rem] w-[18rem] left-[58%] -translate-x-1/2 max-md:top-[-4rem] max-md:h-[20rem] max-md:w-[14rem] max-md:left-auto max-md:right-0 max-md:translate-x-0 max-[450px]:hidden"
           aria-hidden
         >
           <Image

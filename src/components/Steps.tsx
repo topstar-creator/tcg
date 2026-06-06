@@ -5,7 +5,7 @@ type StepsProps = {
 };
 
 const stepIconClass =
-  "h-[7.2rem] w-[7.2rem] max-md:h-40 max-md:w-40 max-[450px]:h-40 max-[450px]:w-48 max-[450px]:h-40 max-[450px]:w-40";
+  "h-[5rem] w-[5rem] max-md:h-40 max-md:w-40 max-[450px]:h-40 max-[450px]:w-48 max-[450px]:h-40 max-[450px]:w-40";
 
 function TimelineDot() {
   return (
@@ -60,13 +60,13 @@ function StepText({ step, align }: { step: FlowStep; align: "left" | "right" }) 
         align === "right" ? "items-end text-right" : "items-start text-left"
       }`}
     >
-      <p className="font-serif text-24 font-bold leading-[1.5] text-gold max-md:text-20 max-[450px]:text-18">
+      <p className="font-serif text-20 font-bold leading-[1.5] text-gold max-md:text-18">
         STEP {step.step}
       </p>
-      <h3 className="mb-10 mt-6 text-28 font-bold leading-[1] text-white max-md:text-22 max-[450px]:text-18">
+      <h3 className="mb-12 mt-8 text-22 font-bold leading-[1] text-white max-md:text-20 max-[450px]:text-18">
         {step.title}
       </h3>
-      <p className="text-20 text-[#9CA3AF] max-md:text-18 max-[450px]:text-16">
+      <p className="text-16 text-[#9CA3AF] max-[450px]:text-15">
         {step.description}
       </p>
     </div>
@@ -85,16 +85,16 @@ export function Steps({ steps }: StepsProps) {
           id="steps-heading"
           className="flex flex-wrap items-baseline justify-center gap-x-[0.4rem] gap-y-4 px-20 text-center leading-none max-md:px-25 max-md:leading-[1.3] max-[450px]:px-15"
         >
-          <span className="font-serif text-[6rem] font-extrabold text-white max-md:text-[3.5rem] max-[450px]:text-[3.3rem]">
+          <span className="font-serif text-[3.6rem] font-extrabold text-white max-md:text-[3.5rem] max-[450px]:text-[3.3rem]">
             かんたん
           </span>
-          <span className="font-serif text-[8rem] font-extrabold leading-[0.5] text-gold max-md:text-[5rem] max-[450px]:text-[4.4rem]">
+          <span className="font-serif text-[4.8rem] font-extrabold leading-[0.5] text-gold max-md:text-[5rem] max-[450px]:text-[4.4rem]">
             5
           </span>
-          <span className="font-serif text-[6rem] font-extrabold text-white max-md:text-[3.5rem] max-[450px]:text-[3.3rem]">
+          <span className="font-serif text-[3.6rem] font-extrabold text-white max-md:text-[3.5rem] max-[450px]:text-[3.3rem]">
             ステップ！
           </span>
-          <span className="title-gradient font-serif text-[6rem] font-extrabold max-md:block max-md:w-full max-md:text-[3.5rem] max-[450px]:text-[3.3rem]">
+          <span className="title-gradient font-serif text-[3.6rem] font-extrabold max-md:block max-md:w-full max-md:text-[3.5rem] max-[450px]:text-[3.3rem]">
             買取の流れ
           </span>
         </h2>
@@ -111,7 +111,7 @@ export function Steps({ steps }: StepsProps) {
 
               return (
                 <div key={item.step} className="relative">
-                  <div className="relative hidden items-center gap-15 md:flex">
+                  <div className="relative hidden items-center gap-25 md:flex">
                     <div className="flex flex-1 justify-center">
                       {textOnLeft ? (
                         <StepText step={item} align="right" />
@@ -142,7 +142,7 @@ export function Steps({ steps }: StepsProps) {
                       <TimelineDot />
                     </div>
                     <div className="flex flex-1 flex-col gap-12 max-md:flex-row max-md: gap-20 max-[450px]:gap-15">
-                      <div className="steps-icon-box w-fit max-md:p-10 max-[450px]:p-8">
+                      <div className="steps-icon-box w-fit max-md:p-10 max-[450px]:p-86">
                         <StepIcon icon={item.icon} />
                       </div>
                       <StepText step={item} align="left" />

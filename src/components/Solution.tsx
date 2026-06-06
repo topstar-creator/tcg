@@ -44,14 +44,14 @@ function SolutionIconGraphic({ icon }: { icon: SolutionIcon }) {
 
 function SolutionCard({ item }: { item: SolutionItem }) {
   return (
-    <div className="flex items-center gap-20 rounded-[1.2rem] border-2 border-[#333333] bg-[#050505] p-20 max-md:gap-16 max-md:p-16 max-[450px]:gap-12 max-[450px]:rounded-[1rem] max-[450px]:p-15">
+    <div className="flex items-center gap-16 rounded-[1.2rem] border-2 border-[#333333] bg-[#050505] px-20 py-15 max-md:gap-12 max-md:p-16 max-[450px]:gap-10 max-[450px]:rounded-[1rem] max-[450px]:p-15">
       <div
-        className="flex h-[5rem] w-[5rem] items-center justify-center max-md:h-40 max-md:w-40 max-[450px]:h-36 max-[450px]:w-36"
+        className="flex h-[3.6rem] w-[3.6rem] items-center justify-center max-md:h-[3.5rem] max-md:w-[3.5rem]"
         aria-hidden
       >
         <SolutionIconGraphic icon={item.icon} />
       </div>
-      <p className="flex-1 text-28 font-medium leading-[1.2] max-md:text-22 max-[450px]:text-18 max-[450px]:leading-[1.5]">{item.text}</p>
+      <p className="flex-1 text-18 font-medium leading-[1.3] max-md:text-16 max-md:leading-[1.4] max-[450px]:text-[1.5rem] max-[450px]:leading-[1.5]">{item.text}</p>
     </div>
   );
 }
@@ -63,7 +63,7 @@ export function Solution({ content }: SolutionProps) {
       className="bg-background py-80 border-t border-b border-[#333333] max-md:overflow-hidden max-md:py-60"
       aria-labelledby="solution-heading"
     >
-      <div className="relative flex flex-col items-center gap-50 mx-150 max-md:mx-auto max-md:gap-40 max-md:px-25 max-[450px]:gap-32 max-[450px]:px-15">
+      <div className="relative flex flex-col items-center gap-60 mx-200 max-md:mx-auto max-md:gap-45 max-md:px-25 max-[450px]:gap-40 max-[450px]:px-15">
         <div className="relative flex w-full justify-center">
           <h2
             id="solution-heading"
@@ -72,28 +72,28 @@ export function Solution({ content }: SolutionProps) {
             こんな<span className="title-gradient">お悩み</span>ありませんか
           </h2>
           <div
-            className="pointer-events-none absolute top-[-5rem] right-[12rem] h-[14rem] w-[9rem] max-md:top-[-3rem] max-md:right-[8rem] max-md:h-[9rem] max-md:w-[6rem] max-[450px]:top-[-2rem] max-[450px]:right-[-1rem] max-[450px]:w-[5rem] max-[450px]:h-[7rem]"
+            className="pointer-events-none absolute top-[-3.5rem] right-[20rem] h-[11rem] w-[7rem] max-md:top-[-3rem] max-md:right-[8rem] max-md:h-[9rem] max-md:w-[6rem] max-[450px]:top-[-2rem] max-[450px]:right-[-1rem] max-[450px]:w-[5rem] max-[450px]:h-[7rem]"
             aria-hidden
           >
             <Image
               src="/images/solution_mark.png"
               alt=""
               fill
-              sizes="(max-width: 450px) 5rem, (max-width: 768px) 6rem, 9rem"
+              sizes="(max-width: 450px) 5rem, (max-width: 768px) 7rem, 11rem"
               className="object-contain"
             />
           </div>
         </div>
 
-        <div className="grid w-full grid-cols-2 gap-20 max-md:grid-cols-1 max-md:gap-16 max-[450px]:gap-12">
+        <div className="grid w-full grid-cols-2 gap-20 max-md:grid-cols-1 max-md:gap-12 max-[450px]:gap-10">
           {content.items.map((item, index) => (
             <SolutionCard key={`${item.icon}-${index}`} item={item} />
           ))}
         </div>
 
-        <p className="text-center font-serif text-[3.6rem] font-bold leading-[1] text-white max-md:text-[2.8rem] max-md:leading-[1.3] max-[450px]:text-[2.4rem] max-[450px]:leading-[1.5]">
+        <p className="text-center font-serif text-30 font-bold leading-[1] text-white max-md:text-[2.6rem] max-md:leading-[1.3] max-[450px]:text-[2.4rem] max-[450px]:leading-[1.5]">
           {content.closingBefore}
-          <span className="title-gradient text-[4.8rem] font-[800] leading-[0.75] max-md:text-[3.6rem] max-[450px]:text-[3rem]">{content.closingBrand}</span><br className="hidden max-[450px]:block" />
+          <span className="title-gradient text-40 font-[800] leading-[0.75] max-md:text-[3.6rem] max-[450px]:text-[3rem]">{content.closingBrand}</span><br className="hidden max-[450px]:block" />
           {content.closingAfter}
         </p>
       </div>

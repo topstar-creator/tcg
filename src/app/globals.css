@@ -288,7 +288,7 @@ body {
 .section-title {
   font-family: var(--font-noto-serif-jp), ui-serif, serif;
   font-weight: 800;
-  font-size: 4rem;
+  font-size: var(--text-36);
   line-height: 1;
   text-align: center;
 }
@@ -309,13 +309,13 @@ body {
 
 @media (max-width: 768px) {
   .section-title {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
   }
 }
 
 @media (max-width: 450px) {
   .section-title {
-    font-size: 3.3rem;
+    font-size: 3rem;
     line-height: 1.4;
   }
 
@@ -418,7 +418,7 @@ body {
 
 .compare-table__cell {
   font-family: var(--font-noto-sans-jp), sans-serif;
-  font-size: 1.6rem;
+  font-size: var(--text-15);
   padding: 1.8rem 2rem;
   vertical-align: middle;
   border-top: 1px solid #333333;
@@ -430,7 +430,7 @@ body {
 }
 
 .compare-table__label {
-  font-size: 2rem;
+  font-size: var(--text-17);
   text-align: left;
   padding: 1.8rem 2rem;
   color: var(--gray);
@@ -442,7 +442,7 @@ body {
 }
 
 .compare-table__royal {
-  font-size: 2rem;
+  font-size: var(--text-17);
   font-weight: 700;
   color: var(--color-gold);
   text-align: center;
@@ -452,7 +452,7 @@ body {
 
 .compare-table__head {
   border-top: none;
-  font-size: 2.2rem;
+  font-size: var(--text-20);
   font-weight: 700;
   background-color: #050505;
   color: #9CA3AF;
@@ -479,7 +479,6 @@ body {
   }
 
   .compare-table {
-    min-width: 56rem;
     border-radius: 1rem;
   }
 
@@ -513,30 +512,29 @@ body {
 
 @media (max-width: 450px) {
   .compare-table {
-    min-width: 62rem;
     border-radius: 0.8rem;
   }
 
   .compare-table__cell {
-    font-size: 1.4rem;
-    padding: 1.3rem 1rem;
+    font-size: var(--text-12);
+    padding: 1rem;
   }
 
   .compare-table thead .compare-table__cell {
-    padding: 1.6rem 1rem;
+    padding: 1rem;
   }
 
   .compare-table__label {
-    font-size: 1.6rem;
-    padding: 1.5rem 1rem;
+    font-size: var(--text-13);
+    padding: 1rem;
   }
 
   .compare-table__royal {
-    font-size: 1.5rem;
+    font-size: var(--text-13);
   }
 
   .compare-table__head {
-    font-size: 1.6rem;
+    font-size: var(--text-16);
   }
 }
 
@@ -546,7 +544,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 1.3rem;
+  padding: 1rem;
   background: linear-gradient(115.27deg, #fdf5a9 0%, #d4af37 50%, #a68a28 100%);
   border: 1px solid #333333;
   border-radius: 1.2rem;

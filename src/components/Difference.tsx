@@ -4,6 +4,30 @@ type DifferenceProps = {
   content: LandingPageData["difference"];
 };
 
+function DifferenceCellText({ text }: { text: string }) {
+  const lines = text.split("\n");
+
+  if (lines.length === 1) {
+    return text;
+  }
+
+  return (
+    <>
+      {lines.map((line, index) => (
+        <span key={index}>
+          {index > 0 && (
+            <>
+              <br className="hidden max-[450px]:block" />
+              <span className="max-[450px]:hidden"> </span>
+            </>
+          )}
+          {line}
+        </span>
+      ))}
+    </>
+  );
+}
+
 export function Difference({ content }: DifferenceProps) {
   return (
     <section
@@ -11,7 +35,7 @@ export function Difference({ content }: DifferenceProps) {
       className="bg-background py-80 max-md:overflow-hidden max-md:py-60"
       aria-labelledby="difference-heading"
     >
-      <div className="flex flex-col gap-50 px-[20rem] max-md:px-25 max-md:gap-40 max-[450px]:px-15">
+      <div className="flex flex-col gap-50 px-[25rem] max-md:px-25 max-md:gap-40 max-[450px]:px-15">
         <div className="relative text-center">
           <h2
             id="difference-heading"
@@ -63,11 +87,17 @@ export function Difference({ content }: DifferenceProps) {
               {content.items.map((item) => (
                 <tr key={item.label}>
                   <th scope="row" className="compare-table__cell compare-table__label font-medium">
-                    {item.label}
+                    <DifferenceCellText text={item.label} />
                   </th>
-                  <td className="compare-table__cell compare-table__royal">{item.tcgRoyal}</td>
-                  <td className="compare-table__cell compare-table__rival">{item.companyA}</td>
-                  <td className="compare-table__cell compare-table__rival">{item.companyB}</td>
+                  <td className="compare-table__cell compare-table__royal">
+                    <DifferenceCellText text={item.tcgRoyal} />
+                  </td>
+                  <td className="compare-table__cell compare-table__rival">
+                    <DifferenceCellText text={item.companyA} />
+                  </td>
+                  <td className="compare-table__cell compare-table__rival">
+                    <DifferenceCellText text={item.companyB} />
+                  </td>
                 </tr>
               ))}
             </tbody>
