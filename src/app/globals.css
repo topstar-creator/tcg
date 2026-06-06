@@ -288,7 +288,7 @@ body {
 .section-title {
   font-family: var(--font-noto-serif-jp), ui-serif, serif;
   font-weight: 800;
-  font-size: 6rem;
+  font-size: 4rem;
   line-height: 1;
   text-align: center;
 }
@@ -331,12 +331,12 @@ body {
   display: inline-grid;
   font-family: var(--font-noto-serif-jp), ui-serif, serif;
   font-weight: 900;
-  font-size: 7rem;
+  font-size: 8rem;
   line-height: 1.2;
   letter-spacing: 0.07em;
   text-align: center;
   -webkit-font-smoothing: antialiased;
-  filter: drop-shadow(.7rem .5rem .3rem #ffffff) drop-shadow(0 .7rem 1.8rem #D4AF3782);
+  filter: drop-shadow(.6rem .4rem .2rem #ffffff) drop-shadow(0 .5rem 1.5rem #D4AF3782);
 }
 
 .fv-title-stroke,
