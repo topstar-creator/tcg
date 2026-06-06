@@ -51,31 +51,6 @@ export function Cta({ content }: CtaProps) {
         </div>
 
         <div className="flex w-full flex-col items-center gap-56 max-md:gap-40 max-[450px]:gap-32">
-          <ul className="flex w-fit list-none flex-col gap-10 rounded-[1.6rem] border-2 border-[#D4AF3733] bg-[#00000080] px-50 py-32 max-md:px-40 max-md:py-28 max-[450px]:gap-8 max-[450px]:rounded-[1.2rem] max-[450px]:px-30 max-[450px]:py-24">
-            {content.features.map((feature) => (
-              <li
-                key={feature}
-                className="flex items-center gap-20 text-28 font-bold leading-none text-white max-md:gap-16 max-md:text-22 max-[450px]:gap-12 max-[450px]:text-18"
-              >
-                <svg
-                  className="w-40 max-md:w-32 max-[450px]:w-26"
-                  viewBox="0 0 40 34"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8 18.8887L14.5714 24.5553L31 10.3887"
-                    stroke="#D4AF37"
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                {feature}
-              </li>
-            ))}
-          </ul>
-
           <div className="flex w-[51.2rem] max-w-full flex-col gap-20 max-md:w-[40rem] max-[450px]:gap-12">
             <CtaPrimaryButton className={`w-full ${ctaButtonResponsiveClass}`} />
             <CtaLineButton className={`w-full ${ctaButtonResponsiveClass}`} />

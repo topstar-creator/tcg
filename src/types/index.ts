@@ -1,7 +1,6 @@
 export type {
   Differentiator,
   FaqItem,
-  FvBenefit,
   FvHighlight,
   FvHighlightIcon,
   FlowStep,

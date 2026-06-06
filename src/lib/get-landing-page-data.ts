@@ -31,11 +31,10 @@ export async function getLandingPageData(): Promise<LandingPageData> {
       titleTagline: "価値を見極める",
       titleAccent: "高価郵送買取",
       description: "海外販路があるため、他社より高価買取が可能。",
-      benefits: [
-        { label: "最短当日査定", highlightLeading: "最短" },
-        { label: "当日振込" },
-        { label: "送料無料" },
-        { label: "減額なし" },
+      features: [
+        "最短当日査定 / 当日振込",
+        "送料無料",
+        "基本減額なし",
       ],
       highlights: [
         { icon: "noReduction", label: "基本減額なし" },
@@ -262,11 +261,6 @@ export async function getLandingPageData(): Promise<LandingPageData> {
     cta: {
       headingLeading: "PSA10の買取価格を",
       headingAccent: "今すぐチェック",
-      features: [
-        "最短当日査定 / 当日振込",
-        "送料無料",
-        "基本減額なし",
-      ],
       primaryButton: {
         label: "今すぐ買取価格を見る",
         href: "#",

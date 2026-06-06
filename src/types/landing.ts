@@ -42,11 +42,6 @@ export type FaqItem = {
   answer: string;
 };
 
-export type FvBenefit = {
-  label: string;
-  highlightLeading?: string;
-};
-
 export type FvHighlightIcon = "noReduction" | "sameDay" | "freeShipping";
 
 export type FvHighlight = {
@@ -60,7 +55,7 @@ export type LandingPageData = {
     titleTagline: string;
     titleAccent: string;
     description: string;
-    benefits: FvBenefit[];
+    features: string[];
     highlights: FvHighlight[];
     /** Bump when replacing banner_card*.png so Next.js serves fresh files */
     cardAssetVersion: string;
@@ -89,7 +84,6 @@ export type LandingPageData = {
   cta: {
     headingLeading: string;
     headingAccent: string;
-    features: string[];
     primaryButton: {
       label: string;
       href: string;

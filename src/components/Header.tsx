@@ -3,8 +3,8 @@ import Image from "next/image";
 export function Header() {
   return (
     <header className="bg-background">
-      <div className="flex justify-center items-center w-full py-40">
-        <a href="/" className="relative block h-[5.2rem] w-[32.3rem] max-md:h-[5rem] max-md:w-[30rem]">
+      <div className="flex justify-center items-center w-full py-25">
+        <a href="/" className="relative block h-[4rem] w-[25rem] max-md:h-[5rem] max-md:w-[30rem]">
           <Image
             src="/images/logo.png"
             alt="TCG ROYAL"

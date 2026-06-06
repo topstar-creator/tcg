@@ -9,38 +9,6 @@ type FvProps = {
 
 const fvCtaButtonClass = "max-md:py-18 max-md:text-20 max-[450px]:text-18";
 
-function BenefitCheck() {
-  return (
-    <span
-      className="inline-flex h-[3.2rem] w-[3.2rem] items-center justify-center rounded-[0.2rem] bg-gold max-md:h-28 max-md:w-28 max-[450px]:h-24 max-[450px]:w-24"
-      aria-hidden
-    >
-      <svg className="h-[1.3rem] w-[1.6rem] max-md:h-12 max-md:w-14 max-[450px]:h-10 max-[450px]:w-12" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5.33333 12.5333L8.49176e-09 7.2L1.86667 5.33333L5.33333 8.8L14.1333 -1.6669e-08L16 1.86667L5.33333 12.5333Z" fill="white"/>
-      </svg>
-    </span>
-  );
-}
-
-function BenefitLabel({
-  label,
-  highlightLeading,
-}: {
-  label: string;
-  highlightLeading?: string;
-}) {
-  if (highlightLeading && label.startsWith(highlightLeading)) {
-    return (
-      <span className="text-28 leading-[1] max-md:text-22 max-[450px]:text-20">
-        <span className="text-24 font-medium leading-[1] max-md:text-20 max-[450px]:text-18">{highlightLeading}</span>
-        <span className="font-bold text-gold">{label.slice(highlightLeading.length)}</span>
-      </span>
-    );
-  }
-
-  return <span className="text-24 font-bold leading-none text-[#C5A059] max-md:text-20 max-[450px]:text-18">{label}</span>;
-}
-
 function FvHighlightIconGraphic({ icon }: { icon: FvHighlightIcon }) {
   switch (icon) {
     case "noReduction":
@@ -72,14 +40,14 @@ export function Fv({ fv }: FvProps) {
     >
       <div className="relative flex w-full flex-col items-center max-md:px-25 max-[450px]:px-15">
 
-        <span className="bg-black rounded-[0.6rem] border-3 border-[#C5A059] px-70 py-14 text-[4rem] leading-[1] font-[900] tracking-[0.04em] text-[#C5A059] drop-shadow-[4px_4px_8px_#C5A05975] max-md:px-40 max-md:py-10 max-md:text-[2.8rem] max-[450px]:px-30 max-[450px]:py-8 max-[450px]:text-[2.4rem]">
+        <span className="bg-black rounded-[0.6rem] border-3 border-[#C5A059] px-30 py-10 text-22 leading-[1] font-[900] tracking-[0.04em] text-[#C5A059] drop-shadow-[4px_4px_8px_#C5A05975] max-md:px-40 max-md:py-10 max-md:text-[2.8rem] max-[450px]:px-30 max-[450px]:py-8 max-[450px]:text-[2.4rem]">
           {fv.badge}
         </span>
 
-        <div className="relative z-10 mt-30 flex flex-col items-center gap-50 text-center max-md:gap-40 max-[450px]:gap-32">
+        <div className="relative z-10 mt-20 flex flex-col items-center gap-40 text-center max-md:gap-40 max-[450px]:gap-32">
           
           <h1 id="fv-heading" className="flex flex-col items-center text-center">
-            <span className="fv-tagline font-serif text-[10rem] font-bold leading-[1] max-md:text-[5.6rem] max-[450px]:text-[4.4rem]">
+            <span className="fv-tagline font-serif text-[6rem] font-bold leading-[1] max-md:text-[5.6rem] max-[450px]:text-[4.4rem]">
               {fv.titleTagline}
             </span>
             <span className="fv-title-accent">
@@ -89,19 +57,32 @@ export function Fv({ fv }: FvProps) {
               <span className="fv-title-accent__fill">{fv.titleAccent}</span>
             </span>
           </h1>
-          <p className="text-36 font-medium leading-[1] max-md:text-24 max-md:leading-[1.4] max-[450px]:text-20 max-[450px]:text-18">
+          <p className="text-36 font-medium leading-[1] max-md:text-18 max-md:leading-[1.4] max-[450px]:text-20 max-[450px]:text-18">
             {fv.description}
           </p>
         </div>
 
-        <ul className="mt-30 mb-60 flex flex-wrap items-center justify-center gap-x-30 gap-y-12 max-md:mt-24 max-md:mb-40 max-md:gap-x-20 max-[450px]:mt-20 max-[450px]:mb-32 max-[450px]:grid max-[450px]:grid-cols-2 max-[450px]:gap-x-25 max-[450px]:gap-y-20">
-          {fv.benefits.map((benefit) => (
-            <li key={benefit.label} className="flex items-center gap-12 max-md:gap-8 max-[450px]:gap-6">
-              <BenefitCheck />
-              <BenefitLabel
-                label={benefit.label}
-                highlightLeading={benefit.highlightLeading}
-              />
+        <ul className="mt-30 mb-30 flex w-fit list-none gap-10 rounded-[1.6rem] border-2 border-[#D4AF3733] bg-[#00000080] px-50 py-32 max-md:px-40 max-md:py-28 max-[450px]:mb-24 max-[450px]:gap-8 max-[450px]:rounded-[1.2rem] max-[450px]:px-30 max-[450px]:py-24">
+          {fv.features.map((feature) => (
+            <li
+              key={feature}
+              className="flex items-center gap-20 text-28 font-bold leading-none text-white max-md:gap-16 max-md:text-22 max-[450px]:gap-12 max-[450px]:text-18"
+            >
+              <svg
+                className="w-40 max-md:w-32 max-[450px]:w-26"
+                viewBox="0 0 40 34"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 18.8887L14.5714 24.5553L31 10.3887"
+                  stroke="#D4AF37"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              {feature}
             </li>
           ))}
         </ul>
