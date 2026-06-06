@@ -46,46 +46,30 @@ export function Fv({ fv }: FvProps) {
 
         <div className="relative z-10 mt-15 flex flex-col items-center gap-25 text-center max-md:gap-40 max-[450px]:gap-32">
           
-          <h1 id="fv-heading" className="flex flex-col items-center text-center">
-            <span className="fv-tagline font-serif text-[4rem] font-bold leading-[1] max-md:text-[5.6rem] max-[450px]:text-[4.4rem]">
-              {fv.titleTagline}
+          <h1 className="fv-title flex flex-col items-center text-center">
+            <span className="fv-title-stroke" aria-hidden>
+              {fv.title}
             </span>
-            <span className="fv-title-accent">
-              <span className="fv-title-accent__stroke" aria-hidden>
-                {fv.titleAccent}
-              </span>
-              <span className="fv-title-accent__fill">{fv.titleAccent}</span>
-            </span>
+            <span className="fv-title-fill">{fv.title}</span>
           </h1>
           <p className="text-16 font-medium leading-[1] max-md:text-18 max-md:leading-[1.4] max-[450px]:text-20 max-[450px]:text-18">
             {fv.description}
           </p>
         </div>
 
-        <ul className="mt-15 mb-25 flex w-fit list-none gap-40 rounded-[1rem] border-2 border-[#D4AF3733] bg-[#00000080] px-30 py-12 max-md:px-40 max-md:py-28 max-[450px]:mb-24 max-[450px]:gap-8 max-[450px]:rounded-[1.2rem] max-[450px]:px-30 max-[450px]:py-24">
-          {fv.features.map((feature) => (
-            <li
-              key={feature}
-              className="flex items-center gap-5 text-15 font-bold leading-none text-white max-md:gap-16 max-[450px]:gap-12 max-[450px]:text-18"
+        <div className="mb-20 flex w-full justify-center gap-30 max-md:mb-32 max-md:gap-16 max-[450px]:mb-24 max-[450px]:flex-col max-[450px]:gap-12 max-[450px]:px-15">
+          {fv.highlights.map((item) => (
+            <div
+              key={item.label}
+              className="flex items-center gap-15 rounded-[1.2rem] border-2 border-[#D4AF37] px-30 py-8 max-md:gap-12 max-md:px-20 max-md:py-8 max-[450px]:justify-center max-[450px]:gap-12 max-[450px]:px-20 max-[450px]:gap-12"
             >
-              <svg
-                className="w-20 max-md:w-32 max-[450px]:w-26"
-                viewBox="0 0 40 34"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M8 18.8887L14.5714 24.5553L31 10.3887"
-                  stroke="#D4AF37"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              {feature}
-            </li>
+              <FvHighlightIconGraphic icon={item.icon} />
+              <p className="text-15 font-bold leading-[1] text-gold max-md:text-18 max-[450px]:text-18">
+                {item.label}
+              </p>
+            </div>
           ))}
-        </ul>
+        </div>
 
         <div className="relative mb-20 flex w-full items-center justify-center max-md:mb-40 max-[450px]:mb-32">
           <div className="relative flex items-end justify-center">
@@ -123,20 +107,6 @@ export function Fv({ fv }: FvProps) {
           </div>
         </div>
 
-        <div className="mb-20 flex w-full justify-center gap-30 max-md:mb-32 max-md:gap-16 max-[450px]:mb-24 max-[450px]:flex-col max-[450px]:gap-12 max-[450px]:px-15">
-          {fv.highlights.map((item) => (
-            <div
-              key={item.label}
-              className="flex items-center gap-15 rounded-[1.2rem] border-2 border-[#D4AF37] px-30 py-8 max-md:gap-12 max-md:px-20 max-md:py-8 max-[450px]:justify-center max-[450px]:gap-12 max-[450px]:px-20 max-[450px]:gap-12"
-            >
-              <FvHighlightIconGraphic icon={item.icon} />
-              <p className="text-15 font-bold leading-[1] text-gold max-md:text-18 max-[450px]:text-18">
-                {item.label}
-              </p>
-            </div>
-          ))}
-        </div>
-
         <div className="flex w-full justify-center gap-60 px-350 max-md:flex-col-reverse max-md:gap-20 max-md:w-[51.2rem] max-md:px-0 max-[450px]:gap-12 max-[450px]:w-[40rem]">
           <CtaLineButton
             className={`flex-1 ${fvCtaButtonClass}`}
@@ -146,7 +116,7 @@ export function Fv({ fv }: FvProps) {
           />
         </div>
 
-        <div className="absolute top-[19rem] right-[15rem] h-[37rem] w-[25rem] max-md:top-[12rem] max-md:right-0 max-md:h-[20rem] max-md:w-[14rem] max-[450px]:hidden">
+        <div className="absolute top-[7rem] right-[41rem] h-[24rem] w-[15rem] max-md:top-[12rem] max-md:right-0 max-md:h-[20rem] max-md:w-[14rem] max-[450px]:hidden">
           <Image
             src="/images/star.png"
             alt=""

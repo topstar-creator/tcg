@@ -326,14 +326,7 @@ body {
 
 
 /* FV */
-.fv-tagline {
-  background: linear-gradient(103.88deg, #fdf5a9 0%, #d4af37 50%, #a68a28 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.fv-title-accent {
+.fv-title {
   position: relative;
   display: inline-grid;
   font-family: var(--font-noto-serif-jp), ui-serif, serif;
@@ -346,8 +339,8 @@ body {
   filter: drop-shadow(.7rem .5rem .3rem #ffffff) drop-shadow(0 .7rem 1.8rem #D4AF3782);
 }
 
-.fv-title-accent__stroke,
-.fv-title-accent__fill {
+.fv-title-stroke,
+.fv-title-fill {
   grid-area: 1 / 1;
   font: inherit;
   letter-spacing: inherit;
@@ -355,7 +348,7 @@ body {
   white-space: nowrap;
 }
 
-.fv-title-accent__stroke {
+.fv-title-stroke {
   z-index: 1;
   color: transparent;
   -webkit-text-stroke: 0.6rem #050505;
@@ -363,7 +356,7 @@ body {
   pointer-events: none;
 }
 
-.fv-title-accent__fill {
+.fv-title-fill {
   z-index: 3;
   background: linear-gradient(
     90.06deg,
@@ -379,24 +372,24 @@ body {
 }
 
 @media (max-width: 768px) {
-  .fv-title-accent {
+  .fv-title {
     font-size: 8rem;
     filter: drop-shadow(0.4rem 0.3rem 0.2rem #ffffff) drop-shadow(0 0.4rem 1rem #D4AF3782);
     line-height: 1.4;
   }
 
-  .fv-title-accent__stroke {
+  .fv-title-stroke {
     -webkit-text-stroke: 0.35rem #050505;
   }
 }
 
 @media (max-width: 450px) {
-  .fv-title-accent {
+  .fv-title {
     font-size: 6.4rem;
     letter-spacing: 0.04em;
   }
 
-  .fv-title-accent__stroke {
+  .fv-title-stroke {
     -webkit-text-stroke: 0.25rem #050505;
   }
 }

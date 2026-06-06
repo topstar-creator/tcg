@@ -28,14 +28,8 @@ export async function getLandingPageData(): Promise<LandingPageData> {
   return {
     fv: {
       badge: "PSA10特化",
-      titleTagline: "価値を見極める",
-      titleAccent: "高価郵送買取",
+      title: "高価郵送買取",
       description: "海外販路があるため、他社より高価買取が可能。",
-      features: [
-        "最短当日査定 / 当日振込",
-        "送料無料",
-        "基本減額なし",
-      ],
       highlights: [
         { icon: "noReduction", label: "基本減額なし" },
         { icon: "sameDay", label: "最短当日査定・振込" },

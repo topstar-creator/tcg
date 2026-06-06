@@ -52,10 +52,8 @@ export type FvHighlight = {
 export type LandingPageData = {
   fv: {
     badge: string;
-    titleTagline: string;
-    titleAccent: string;
+    title: string;
     description: string;
-    features: string[];
     highlights: FvHighlight[];
     /** Bump when replacing banner_card*.png so Next.js serves fresh files */
     cardAssetVersion: string;
