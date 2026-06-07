@@ -13,19 +13,19 @@ function FvHighlightIconGraphic({ icon }: { icon: FvHighlightIcon }) {
   switch (icon) {
     case "noReduction":
       return (
-        <span className="relative h-[2.5rem] w-[3rem] max-md:h-[2.5rem] max-md:w-[3rem]">
+        <span className="relative h-[2.5rem] w-[3rem] max-md:h-[2.5rem] max-md:w-[3rem] max-[450px]:h-[2.5rem] max-[450px]:w-[2rem]">
           <Image src="/images/banner_icon01.png" alt="基本減額なし" fill sizes="(max-width: 768px) 3rem, 2.5rem" className="object-contain" />
         </span>
       );
     case "sameDay":
       return (
-        <span className="relative h-[2.5rem] w-[2.5rem] max-md:h-[2.5rem] max-md:w-[2.5rem]">
+        <span className="relative h-[2.5rem] w-[2.5rem] max-md:h-[2.5rem] max-md:w-[2.5rem] max-[450px]:h-[2rem] max-[450px]:w-[2rem]">
           <Image src="/images/banner_icon02.png" alt="最短当日査定・振込" fill sizes="(max-width: 768px) 2.5rem, 2.5rem" className="object-contain" />
         </span>
       );
     case "freeShipping":
       return (
-        <span className="relative h-[2rem] w-[2.5rem] max-md:h-[3rem] max-md:w-[2.5rem]">
+        <span className="relative h-[2rem] w-[2.5rem] max-md:h-[3rem] max-md:w-[2.5rem] max-[450px]:h-[2rem] max-[450px]:w-[2rem]">
           <Image src="/images/banner_icon03.png" alt="送料無料" fill sizes="(max-width: 768px) 2.5rem, 3rem" className="object-contain" />
         </span>
       );
@@ -44,7 +44,7 @@ export function Fv({ fv }: FvProps) {
           {fv.badge}
         </span>
 
-        <div className="relative z-10 mt-15 flex flex-col items-center gap-25 text-center max-md:gap-15 max-[450px]:mt-5">
+        <div className="relative z-10 mt-15 flex flex-col items-center gap-20 text-center max-md:gap-15 max-[450px]:mt-5">
           
           <h1 className="fv-title flex flex-col items-center text-center">
             <span className="fv-title-stroke" aria-hidden>
@@ -52,26 +52,29 @@ export function Fv({ fv }: FvProps) {
             </span>
             <span className="fv-title-fill">{fv.title}</span>
           </h1>
-          <p className="text-16 font-medium leading-[1] max-[450px]:text-18">
-            {fv.description}
+          <p className="fv-description">
+            <span className="fv-description-stroke" aria-hidden>
+              {fv.description}
+            </span>
+            <span className="fv-description-fill">{fv.description}</span>
           </p>
         </div>
 
-        <div className="mt-30 mb-20 flex w-full justify-center gap-30 max-md:mt-20 max-md:mb-20 max-md:gap-16 max-[450px]:flex-col max-[450px]:gap-10">
+        <div className="mt-25 mb-20 flex w-full justify-center gap-30 max-md:mt-20 max-md:mb-20 max-md:gap-16 max-[450px]:gap-8">
           {fv.highlights.map((item) => (
             <div
               key={item.label}
-              className="flex items-center gap-15 rounded-[1.2rem] border-2 border-[#D4AF37] px-30 py-8 max-md:gap-12 max-md:px-20 max-md:py-6 max-[450px]:justify-center max-[450px]:gap-12 max-[450px]:px-20 max-[450px]:gap-12"
+              className="flex items-center gap-15 rounded-[1.2rem] border-2 border-[#D4AF37] px-30 py-8 max-md:gap-12 max-md:px-20 max-md:py-6 max-[450px]:justify-center max-[450px]:gap-8 max-[450px]:px-10 max-[450px]:gap-8"
             >
               <FvHighlightIconGraphic icon={item.icon} />
-              <p className="text-15 font-bold leading-[1] text-gold">
+              <p className="text-15 font-bold leading-[1] text-gold max-[450px]:text-13">
                 {item.label}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="relative mb-40 flex w-full items-center justify-center max-md:mb-40 max-[450px]:mb-25">
+        <div className="relative mb-30 flex w-full items-center justify-center max-md:mb-40 max-[450px]:mb-25">
           <div className="relative flex items-end justify-center">
             <div className="relative z-10 w-[11rem] aspect-[22/30.8] max-md:w-[10rem]">
               <Image
@@ -116,7 +119,7 @@ export function Fv({ fv }: FvProps) {
           />
         </div>
 
-        <div className="absolute top-[7rem] right-[41rem] h-[24rem] w-[15rem] max-md:top-[7rem] max-md:right-[5rem] max-md:h-[20rem] max-md:w-[14rem] max-[450px]:hidden">
+        <div className="absolute top-[5rem] right-[41rem] h-[24rem] w-[15rem] max-md:top-[7rem] max-md:right-[5rem] max-md:h-[20rem] max-md:w-[14rem] max-[450px]:hidden">
           <Image
             src="/images/star.png"
             alt=""

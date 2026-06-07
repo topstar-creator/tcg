@@ -371,6 +371,42 @@ body {
   color: transparent;
 }
 
+.fv-description {
+  position: relative;
+  display: inline-grid;
+  max-width: 100%;
+  font-family: var(--font-serif), ui-serif, serif;
+  font-weight: 700;
+  font-size: var(--text-32);
+  line-height: 1.3;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  filter: drop-shadow(1px 1px 1px #ffffff) drop-shadow(0 .5rem 1.5rem #D4AF3782);
+}
+
+.fv-description-stroke,
+.fv-description-fill {
+  grid-area: 1 / 1;
+  font: inherit;
+  line-height: inherit;
+}
+
+.fv-description-stroke {
+  z-index: 1;
+  color: transparent;
+  -webkit-text-stroke: 0.3rem #050505;
+  user-select: none;
+  pointer-events: none;
+}
+
+.fv-description-fill {
+  z-index: 2;
+  background: linear-gradient(90.06deg, #FFFFFF 1.8%, #B3B3B3 98.76%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 @media (max-width: 768px) {
   .fv-title {
     font-size: 8rem;
@@ -380,6 +416,15 @@ body {
 
   .fv-title-stroke {
     -webkit-text-stroke: 0.35rem #050505;
+  }
+
+  .fv-description {
+    font-size: var(--text-24);
+    filter: drop-shadow(.5px .5px .5px #ffffff) drop-shadow(0 0.3rem .6rem #D4AF3782);
+  }
+
+  .fv-description-stroke {
+    -webkit-text-stroke: 0.2rem #050505;
   }
 }
 
@@ -391,6 +436,15 @@ body {
 
   .fv-title-stroke {
     -webkit-text-stroke: 0.25rem #050505;
+  }
+
+  .fv-description {
+    font-size: var(--text-18);
+    filter: drop-shadow(0 0.3rem .6rem #D4AF3782);
+  }
+
+  .fv-description-stroke {
+    -webkit-text-stroke: 0.1rem #050505;
   }
 }
 
@@ -601,6 +655,40 @@ body {
       box-shadow 0.2s ease,
       background-color 0.2s ease,
       filter 0.2s ease;
+  }
+
+  a.cta-line-button .cta-line-button__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #fv a.cta-line-button .cta-line-button__icon {
+    left: 18%;
+  }
+
+  #cta a.cta-line-button .cta-line-button__icon {
+    left: 26%;
+  }
+
+  @media (max-width: 768px) {
+    #fv a.cta-line-button .cta-line-button__icon {
+      left: 20%;
+    }
+
+    #cta a.cta-line-button .cta-line-button__icon {
+      left: 19%;
+    }
+  }
+
+  @media (max-width: 450px) {
+    #fv a.cta-line-button .cta-line-button__icon {
+      left: 9%;
+    }
+
+    #cta a.cta-line-button .cta-line-button__icon {
+      left: 20%;
+    }
   }
 
   @media (hover: hover) {
